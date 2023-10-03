@@ -51,7 +51,7 @@ def set_new_target_arrow():
     global frame
     global target_exists
 
-    if points:
+    if points:  #f리스트 안에 남아있는 점이 있으면
         sx, sy = cx, cy  # 시작점
         # hx, hy = TUK_WIDTH-50,TUK_HEIGHT-50
         hx, hy = points[0]
@@ -94,7 +94,7 @@ def update_world():
             del points[0] #목표지점에 왔기 때문에 더 이상 필요없는 점을 삭제
             set_new_target_arrow()
     elif points:    #목표 지점이 없는 상황에서 새로운 목표 지점이 생기면
-        set_new_target_arrow
+        set_new_target_arrow()
 
 
 open_canvas(TUK_WIDTH, TUK_HEIGHT)
